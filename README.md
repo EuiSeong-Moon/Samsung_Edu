@@ -73,14 +73,14 @@ Open [http://localhost:3000](http://localhost:3000) — click **Sign in with Goo
 │   ├── auth.ts                 # Auth.js config (Google + Prisma adapter)
 │   └── db.ts                   # Prisma singleton
 ├── prisma/schema.prisma        # DB schema (Auth.js tables)
-└── middleware.ts               # Session propagation
+└── proxy.ts                    # Session propagation (Next.js 16)
 ```
 
 ---
 
 ## Protecting Routes
 
-Edit `middleware.ts` to redirect unauthenticated users:
+Edit `proxy.ts` to redirect unauthenticated users:
 
 ```ts
 import { auth } from "@/lib/auth"
